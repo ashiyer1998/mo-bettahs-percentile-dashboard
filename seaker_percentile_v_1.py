@@ -84,7 +84,7 @@ if not df.empty:
 
     col1, col2 = st.columns(2)
     with col1:
-        st.subheader("Value Comparison — Potential vs Comparables")
+        st.subheader("Traffic & Trade Area Metrics Comparison — Potential vs Comparables")
         vt = pd.DataFrame({"Metric": metrics})
         vt["Potential"] = [pot_row.get(m, np.nan) for m in metrics]
         for i, r in enumerate(comp_rows): vt[f"Comp {i+1}"] = [r.get(m, np.nan) for m in metrics]
