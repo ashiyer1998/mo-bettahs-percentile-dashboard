@@ -1,5 +1,5 @@
-# seaker_percentile_app_v6_3.py
-# Seaker Percentile & Comparable Visualizer — Label Edition (Final)
+# seaker_percentile_app_v2.py
+
 
 import streamlit as st
 import pandas as pd
