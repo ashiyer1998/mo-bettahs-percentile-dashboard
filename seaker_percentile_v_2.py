@@ -75,7 +75,7 @@ with cols[1]:
 
 hcols = st.columns([0.15, 0.85])
 with hcols[0]:
-    if os.path.exists(logo_path): st.image(logo_path, use_container_width=True)
+    if os.path.exists(logo_path): st.image(logo_path, width=200)
 with hcols[1]:
     st.title("Seaker Percentile & Comparable Visualizer")
 
