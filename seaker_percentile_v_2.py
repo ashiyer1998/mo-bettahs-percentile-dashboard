@@ -12,7 +12,7 @@ from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, Image as RLImage
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 
-st.set_page_config(page_title="Seaker Percentile & Comparable Visualizer", layout="wide")
+#st.set_page_config(page_title="Seaker Percentile & Comparable Visualizer", layout="wide")
 
 # Required columns
 REQUIRED_COLS = [
