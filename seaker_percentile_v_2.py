@@ -58,10 +58,20 @@ def get_row(df, site):
 
 # Header with logo
 logo_path = "seaker_logo.png"
-if os.path.exists(logo_path):
-    st.image(logo_path, use_container_width=True)
-else:
-    st.warning("⚠️ Seaker logo not found — please ensure seaker_logo.png is in the same directory.")
+cols = st.columns([0.18, 0.82])
+
+with cols[0]:
+    if os.path.exists(logo_path):
+        try:
+            st.image(logo_path, width=200)
+        except Exception as e:
+            st.warning(f"⚠️ Logo failed to load: {e}")
+    else:
+        st.warning("⚠️ Seaker logo not found — please ensure seaker_logo.png is in the same directory.")
+
+with cols[1]:
+    st.title("Seaker Percentile & Comparable Visualizer")
+
 
 hcols = st.columns([0.15, 0.85])
 with hcols[0]:
