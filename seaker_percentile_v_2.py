@@ -12,7 +12,7 @@ from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, Image as RLImage
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 
-#st.set_page_config(page_title="Seaker Percentile & Comparable Visualizer", layout="wide")
+st.set_page_config(page_title="Seaker Percentile & Comparable Visualizer", layout="wide")
 
 # Required columns
 REQUIRED_COLS = [
@@ -60,8 +60,8 @@ def get_row(df, site):
 logo_path = "seaker_logo.png"
 cols = st.columns([0.18, 0.82])
 
-with cols[1]:
-    st.title("Seaker Percentile & Comparable Visualizer")
+# with cols[1]:
+    # st.title("Seaker Percentile & Comparable Visualizer")
 
 
 hcols = st.columns([0.15, 0.85])
