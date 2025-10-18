@@ -198,15 +198,18 @@ def build_snapshot(fig_val, fig_pct):
     return combined_img
 
 # Generate the snapshot
-snapshot_path = build_snapshot(fig_val, fig_pct)
-with open(snapshot_path, "rb") as snap_file:
-    st.download_button(
-        "Download PNG Snapshot (for REC Package)",
-        data=snap_file,
-        file_name="seaker_visual_snapshot.png",
-        mime="image/png"
+#snapshot_path = build_snapshot(fig_val, fig_pct)
+if 'fig_val' in locals() and 'fig_pct' in locals():
+    snapshot_path = build_snapshot(fig_val, fig_pct)
+    with open(snapshot_path, "rb") as snap_file:
+        st.download_button(
+            "Download PNG Snapshot (for REC Package)",
+            data=snap_file,
+            file_name="seaker_visual_snapshot.png",
+            mime="image/png"
     )
-
+else:
+    st.info("📊 Upload data and generate charts to enable the snapshot download.")
 
     # Footer
     st.markdown("<hr style='margin-top:40px;margin-bottom:10px;border:0.5px solid #ccc'>", unsafe_allow_html=True)
