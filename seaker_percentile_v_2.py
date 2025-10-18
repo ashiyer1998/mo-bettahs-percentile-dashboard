@@ -57,7 +57,12 @@ def get_row(df, site):
     return row.iloc[0] if not row.empty else None
 
 # Header with logo
-logo_path = os.path.join(os.path.dirname(__file__), "seaker_logo.png")
+logo_path = "seaker_logo.png"
+if os.path.exists(logo_path):
+    st.image(logo_path, use_container_width=True)
+else:
+    st.warning("⚠️ Seaker logo not found — please ensure seaker_logo.png is in the same directory.")
+
 hcols = st.columns([0.15, 0.85])
 with hcols[0]:
     if os.path.exists(logo_path): st.image(logo_path, use_container_width=True)
